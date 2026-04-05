@@ -1,0 +1,294 @@
+:root {
+  --main: #00ffcc;
+  --soft: #9fffe0;
+  --bg: #0a0a0a;
+  --footer: #111111;
+}
+
+body {
+  margin: 0;
+  font-family: monospace;
+  background: var(--bg);
+  color: var(--soft);
+}
+
+/* MATRIX */
+canvas {
+  position: fixed;
+  z-index: -1;
+}
+
+/* PROFILE IMAGE (FIXED CIRCLE) */
+.profile {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--main);
+}
+
+/* STATS */
+#stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.stat h3 {
+  color: #00ff99;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  text-shadow: 0 0 8px var(--main);
+}
+
+/* BUTTONS */
+.buttons a {
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid var(--main);
+  color: var(--soft);
+  text-decoration: none;
+}
+
+.buttons a:hover {
+  background:  var(--main);
+  color: black;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+/* CARD */
+.card {
+  margin-top: 20px;
+  background: #11182b;
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  border: 1px solid #00ff99;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--main);
+}
+
+/* LINKS */
+.card a {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  border: 1px solid #00ffcc;
+  text-decoration: none;
+  color: #00ffcc;
+}
+
+/* CONTACT */
+.contact-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid var(--main);
+}
+
+/* FORM */
+input, textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  background: black;
+  color: var(--soft);
+  border: 1px solid var(--main);
+}
+
+button {
+  padding: 10px;
+  background: var(--main);
+  border: none;
+}
+
+/* FLOATING */
+.floating-container span {
+  position: absolute;
+  animation: float 10s linear infinite;
+  color: #00ffcc22;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-10vh); }
+}
+
+/* FOOTER */
+footer {
+  background: var(--footer);
+  padding: 30px;
+  text-align: center;
+}
+
+.footer-content {
+  color: var(--soft);
+}
+
+.socials i {
+  font-size: 22px;
+  margin: 10px;
+  color: var(--soft);
+}
+
+.socials i:hover {
+  color: var(--main);
+}
+
+footer a {
+  color: var(--soft);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--main);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .card {
+    width: 95%;
+  }
+}
+.social-media {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.social-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #ccc;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: #6a5acd; /* violet-blue */
+  transform: translateY(-4px);
+}
+
+#contact {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.email {
+  background-color: #007bff;
+}
+
+.whatsapp {
+  background-color: #25D366;
+}
+
+.contact-btn:hover {
+  opacity: 0.85;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  margin: 8px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.call {
+  background-color: #25D366; /* Green */
+}
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  background: #11182b;
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  border: 1px solid #00ff99;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card h3 {
+  color: #00ff99;
+  margin-bottom: 10px;
+}
+
+.skill-card ul {
+  padding-left: 20px;
+}
+
+.skill-card li {
+  margin-bottom: 8px;
+}
+
+.cv-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color:  #11182b;
+  color: white;
+  border: none;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cv-btn:hover {
+  background-color: #00ccaa;
+}
